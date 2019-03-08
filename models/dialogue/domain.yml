@@ -1,0 +1,121 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- utter_goodbye
+- utter_ask_howdoing
+- utter_ask_isbot
+- utter_ask_login
+- utter_ask_mobile_email
+- utter_ask_otp
+- utter_ask_setpass
+- utter_ask_reset
+- utter_login_issue
+- utter_ask_appoint
+- utter_search_doc
+- utter_search_hosp
+- utter_search_speciality
+- utter_ask_appoint_confirm
+- utter_ask_invoice
+- utter_e_card
+- utter_enroll
+- utter_policy_details
+- action_faqs
+config:
+  store_entities_as_slots: true
+entities: []
+forms: []
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- ask_howdoing:
+    use_entities: true
+- ask_isbot:
+    use_entities: true
+- ask_login:
+    use_entities: true
+- ask_mobile_email:
+    use_entities: true
+- ask_otp:
+    use_entities: true
+- ask_setpass:
+    use_entities: true
+- ask_reset:
+    use_entities: true
+- login_issue:
+    use_entities: true
+- ask_appoint:
+    use_entities: true
+- search_doc:
+    use_entities: true
+- search_hosp:
+    use_entities: true
+- search_speciality:
+    use_entities: true
+- ask_appoint_confirm:
+    use_entities: true
+- ask_invoice:
+    use_entities: true
+- e_card:
+    use_entities: true
+- enroll:
+    use_entities: true
+- policy_details:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+slots: {}
+templates:
+  utter-ask_mobile_email:
+  - text: Yes, we require your mobile number and email id for sign in. Click the link
+      to be redirected
+  utter_ask_appoint:
+  - text: Book appointment helps you get a confirmed appointment booking with a Doctor
+      or Hospital listed on Vidal Health app.Click the link to be redirected
+  utter_ask_appoint_confirm:
+  - text: You will get confirmation over an email, SMS, Push notification and confirmation
+      status on your app that you may show at the Hospital/Clinic.
+  utter_ask_howdoing:
+  - text: I'm great! Thanks for asking.
+  - text: I'm good, thanks!
+  utter_ask_invoice:
+  - text: appointments > online > view receipt.Click the link to be redirected
+  utter_ask_isbot:
+  - text: Yep I'm a bot!
+  utter_ask_login:
+  - text: You can Sign in via Google/Facebook or use your phone number. Click the
+      link to be redirected
+  utter_ask_otp:
+  - text: Non delivery/delayed delivery of  SMS is may happen due to registration
+      of a number under NDNC/NDND, we would request you to kindly de-register yourself
+      and try again, in case the issue persists contact us on customerservice@vidalhealth.com.
+  utter_ask_reset:
+  - text: To retrieve/reset forgotten passwords kindly go to Sign In > Enter your
+      registered mobile number > Click on forgot Password (the link Type your password)
+      and you will get an OTP, enter the OTP to reset your password. Click the link
+      to be redirected
+  utter_ask_setpass:
+  - text: To set a password kindly Sign Up > key in your email id & Phone No > verify
+      with OTP > Enter Your name & Set Password. Click the link to be redirected
+  utter_e_card:
+  - text: Your E-card can be accesed from the link. Click the link to be redirected
+  utter_enroll:
+  - text: Enroll a new member. Click the link to be redirected
+  utter_goodbye:
+  - text: Talk to you later!
+  - text: Good Bye.
+  utter_greet:
+  - text: Hello :). How can I help you?
+  utter_login_issue:
+  - text: Kindly contact us on customerservice@vidalhealth.com with details of error
+      message.
+  utter_policy_details:
+  - text: Your Policy details. Click the link to be redirected
+  utter_search_doc:
+  - text: DOCTOR SEARCH. Click the link to be redirected
+  utter_search_hosp:
+  - text: HOSPITAL SEARCH. Click the link to be redirected
+  utter_search_speciality:
+  - text: SPECIALITY SEARCH. Click the link to be redirected

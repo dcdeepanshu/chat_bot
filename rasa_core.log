@@ -1,0 +1,1634 @@
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              GET, HEAD, OPTIONS             /
+list_trackers                                      GET, HEAD, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            GET, HEAD, POST, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     GET, HEAD, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, HEAD, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, HEAD, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+status                                             GET, HEAD, OPTIONS             /status
+version                                            GET, HEAD, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9282014657930183}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'whats up?' with intent '{'name': 'ask_howdoing', 'confidence': 0.6674261388787779}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_howdoing': 1.0}]
+There is a memorised next action '9'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_ask_howdoing' with prob 1.00.
+Action 'utter_ask_howdoing' ended with events '[]'
+Bot utterance 'BotUttered(text: I'm great! Thanks for asking., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_howdoing': 1.0}, {'prev_utter_ask_howdoing': 1.0, 'intent_ask_howdoing': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'can i use my mobile no' with intent '{'name': 'ask_mobile_email', 'confidence': 0.37884891300558504}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_howdoing': 1.0}, {'prev_utter_ask_howdoing': 1.0, 'intent_ask_howdoing': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_mobile_email': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Current tracker state [{'prev_utter_ask_howdoing': 1.0, 'intent_ask_howdoing': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_mobile_email': 1.0}, {'prev_action_faqs': 1.0, 'intent_ask_mobile_email': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'how to set password' with intent '{'name': 'ask_setpass', 'confidence': 0.42469596954287026}' and entities '[]'
+Logged UserUtterance - tracker now has 13 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_mobile_email': 1.0}, {'prev_action_faqs': 1.0, 'intent_ask_mobile_email': 1.0}, {'intent_ask_setpass': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: To set a password kindly Sign Up > key in your email id & Phone No > verify with OTP > Enter Your name & Set Password. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_ask_mobile_email': 1.0}, {'intent_ask_setpass': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_setpass': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'i want to book an appointment' with intent '{'name': 'ask_appoint', 'confidence': 0.3421413008441379}' and entities '[]'
+Logged UserUtterance - tracker now has 17 events
+Current slot values: 
+
+Current tracker state [{'intent_ask_setpass': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_setpass': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_appoint': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Book appointment helps you get a confirmed appointment booking with a Doctor or Hospital listed on Vidal Health app.Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_setpass': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_appoint': 1.0}, {'intent_ask_appoint': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'doctor' with intent '{'name': 'search_speciality', 'confidence': 0.2970694026238519}' and entities '[]'
+Logged UserUtterance - tracker now has 21 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_appoint': 1.0}, {'intent_ask_appoint': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_appoint': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'search hospitals' with intent '{'name': 'search_hosp', 'confidence': 0.26487330899857014}' and entities '[]'
+Logged UserUtterance - tracker now has 25 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_search_hosp': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_search_hosp': 1.0}, {'intent_search_hosp': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'dentist' with intent '{'name': 'search_speciality', 'confidence': 0.5500555235218816}' and entities '[{'start': 0, 'end': 7, 'value': 'dentist', 'entity': 'speciality', 'confidence': 0.8937080641739974, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 29 events
+Current slot values: 
+
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_listen': 1.0, 'intent_search_hosp': 1.0}, {'intent_search_hosp': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.98.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'intent_search_hosp': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'how to get my invoice?' with intent '{'name': 'ask_invoice', 'confidence': 0.39201458987633675}' and entities '[]'
+Logged UserUtterance - tracker now has 33 events
+Current slot values: 
+
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_listen': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'intent_ask_invoice': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.98.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: appointments > online > view receipt.Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'intent_ask_invoice': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_invoice': 1.0, 'prev_action_faqs': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'ecard download' with intent '{'name': 'e_card', 'confidence': 0.36407003945569666}' and entities '[]'
+Logged UserUtterance - tracker now has 37 events
+Current slot values: 
+
+Current tracker state [{'intent_ask_invoice': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_invoice': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_e_card': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_invoice': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_e_card': 1.0}, {'prev_action_faqs': 1.0, 'intent_e_card': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.833982273266736}' and entities '[]'
+Logged UserUtterance - tracker now has 41 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_e_card': 1.0}, {'prev_action_faqs': 1.0, 'intent_e_card': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_goodbye' with prob 1.00.
+Action 'utter_goodbye' ended with events '[]'
+Bot utterance 'BotUttered(text: Talk to you later!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_e_card': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_goodbye': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, OPTIONS, GET, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9282014657930183}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'set password' with intent '{'name': 'ask_setpass', 'confidence': 0.5745386102479075}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_setpass': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: To set a password kindly Sign Up > key in your email id & Phone No > verify with OTP > Enter Your name & Set Password. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_setpass': 1.0}, {'prev_action_faqs': 1.0, 'intent_ask_setpass': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'search a particular doctor' with intent '{'name': 'search_doc', 'confidence': 0.2963556567584189}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_setpass': 1.0}, {'prev_action_faqs': 1.0, 'intent_ask_setpass': 1.0}, {'intent_search_doc': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_ask_setpass': 1.0}, {'intent_search_doc': 1.0, 'prev_action_listen': 1.0}, {'intent_search_doc': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.833982273266736}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+
+Current tracker state [{'intent_search_doc': 1.0, 'prev_action_listen': 1.0}, {'intent_search_doc': 1.0, 'prev_action_faqs': 1.0}, {'intent_goodbye': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_goodbye' with prob 1.00.
+Action 'utter_goodbye' ended with events '[]'
+Bot utterance 'BotUttered(text: Good Bye., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_search_doc': 1.0, 'prev_action_faqs': 1.0}, {'intent_goodbye': 1.0, 'prev_action_listen': 1.0}, {'intent_goodbye': 1.0, 'prev_utter_goodbye': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            HEAD, POST, GET, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9137549561088396}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'i want to book an appointment for dentist' with intent '{'name': 'search_speciality', 'confidence': 0.34972789895306156}' and entities '[{'start': 34, 'end': 41, 'value': 'dentist', 'entity': 'speciality', 'confidence': 0.9826619464972212, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_search_speciality': 1.0, 'entity_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.99.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_search_speciality': 1.0, 'entity_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'hospital search' with intent '{'name': 'search_hosp', 'confidence': 0.7011227623375675}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'intent_search_speciality': 1.0, 'entity_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'intent_search_hosp': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: HOSPITAL SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'intent_search_hosp': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_hosp': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.7910815508916674}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+
+Current tracker state [{'intent_search_hosp': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_hosp': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_goodbye' with prob 1.00.
+Action 'utter_goodbye' ended with events '[]'
+Bot utterance 'BotUttered(text: Talk to you later!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_hosp': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_goodbye': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.58.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'search doctor' with intent '{'name': 'search_speciality', 'confidence': 0.4090748406260368}' and entities '[]'
+Logged UserUtterance - tracker now has 18 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_goodbye': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_goodbye': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'utter_greet' with prob 0.30.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_goodbye': 1.0, 'intent_goodbye': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_greet': 1.0, 'intent_search_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.98.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'doctor search' with intent '{'name': 'search_speciality', 'confidence': 0.379364232968601}' and entities '[]'
+Logged UserUtterance - tracker now has 22 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_greet': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'search doctor' with intent '{'name': 'search_speciality', 'confidence': 0.4090748406260368}' and entities '[]'
+Logged UserUtterance - tracker now has 26 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.7910815508916674}' and entities '[]'
+Logged UserUtterance - tracker now has 30 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_goodbye' with prob 1.00.
+Action 'utter_goodbye' ended with events '[]'
+Bot utterance 'BotUttered(text: Talk to you later!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_goodbye': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.58.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            GET, OPTIONS, HEAD, POST       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9137549561088396}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'search doctor' with intent '{'name': 'search_speciality', 'confidence': 0.4090748406260368}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'i want to search a doctor' with intent '{'name': 'search_speciality', 'confidence': 0.2960162334107971}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'hospital search' with intent '{'name': 'search_hosp', 'confidence': 0.7011227623375675}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_hosp': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: HOSPITAL SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_hosp': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_hosp': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'is my appointment confirmed?' with intent '{'name': 'ask_appoint_confirm', 'confidence': 0.26403951474904885}' and entities '[]'
+Logged UserUtterance - tracker now has 18 events
+Current slot values: 
+
+Current tracker state [{'intent_search_hosp': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_hosp': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_appoint_confirm': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: You will get confirmation over an email, SMS, Push notification and confirmation status on your app that you may show at the Hospital/Clinic., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_hosp': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_appoint_confirm': 1.0}, {'prev_action_faqs': 1.0, 'intent_ask_appoint_confirm': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'SHOW MY ECARD' with intent '{'name': 'policy_details', 'confidence': 0.1597286457031489}' and entities '[]'
+Logged UserUtterance - tracker now has 22 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_appoint_confirm': 1.0}, {'prev_action_faqs': 1.0, 'intent_ask_appoint_confirm': 1.0}, {'prev_action_listen': 1.0, 'intent_policy_details': 1.0}]
+There is a memorised next action '26'
+User 'user' has to affirm intent 'policy_details'.
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_default_ask_affirmation' with prob 1.00.
+Action 'action_default_ask_affirmation' ended with events '[]'
+Bot utterance 'BotUttered(text: Did you mean 'policy_details'?, data: {
+  "buttons": [
+    {
+      "title": "Yes",
+      "payload": "/policy_details"
+    },
+    {
+      "title": "No",
+      "payload": "/out_of_scope"
+    }
+  ]
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_ask_appoint_confirm': 1.0}, {'prev_action_listen': 1.0, 'intent_policy_details': 1.0}, {'prev_action_default_ask_affirmation': 1.0, 'intent_policy_details': 1.0}]
+There is no memorised next action
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'No' with intent '{'name': 'greet', 'confidence': 0.45888044244338305}' and entities '[]'
+Logged UserUtterance - tracker now has 26 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_policy_details': 1.0}, {'prev_action_default_ask_affirmation': 1.0, 'intent_policy_details': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+User 'user' affirmed intent 'greet'
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_revert_fallback_events' with prob 1.00.
+Action 'action_revert_fallback_events' ended with events '['UserUtteranceReverted()', 'UserUtteranceReverted()', 'ActionExecuted(action: action_listen, policy: None, confidence: None)', "UserUttered(text: No, intent: {'name': 'greet', 'confidence': 1.2}, entities: [])"]'
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_appoint_confirm': 1.0}, {'prev_action_faqs': 1.0, 'intent_ask_appoint_confirm': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.96.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_ask_appoint_confirm': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_greet': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'show ecard' with intent '{'name': 'goodbye', 'confidence': 0.15916679271517375}' and entities '[]'
+Logged UserUtterance - tracker now has 34 events
+Current slot values: 
+
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}]
+There is no memorised next action
+User 'user' has to affirm intent 'goodbye'.
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_default_ask_affirmation' with prob 1.00.
+Action 'action_default_ask_affirmation' ended with events '[]'
+Bot utterance 'BotUttered(text: Did you mean 'goodbye'?, data: {
+  "buttons": [
+    {
+      "title": "Yes",
+      "payload": "/goodbye"
+    },
+    {
+      "title": "No",
+      "payload": "/out_of_scope"
+    }
+  ]
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}, {'intent_goodbye': 1.0, 'prev_action_default_ask_affirmation': 1.0}]
+There is no memorised next action
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'Yes' with intent '{'name': 'greet', 'confidence': 0.7058982322631818}' and entities '[]'
+Logged UserUtterance - tracker now has 38 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_goodbye': 1.0}, {'intent_goodbye': 1.0, 'prev_action_default_ask_affirmation': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+User 'user' affirmed intent 'greet'
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_revert_fallback_events' with prob 1.00.
+Action 'action_revert_fallback_events' ended with events '['UserUtteranceReverted()', 'UserUtteranceReverted()', 'ActionExecuted(action: action_listen, policy: None, confidence: None)', "UserUttered(text: Yes, intent: {'name': 'greet', 'confidence': 1.2}, entities: [])"]'
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.94.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_greet': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, HEAD, POST, GET       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9137549561088396}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'i want to see my ecard' with intent '{'name': 'ask_reset', 'confidence': 0.15460617691347947}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_ask_reset': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+User 'user' has to affirm intent 'ask_reset'.
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_default_ask_affirmation' with prob 1.00.
+Action 'action_default_ask_affirmation' ended with events '[]'
+Bot utterance 'BotUttered(text: Did you mean 'ask_reset'?, data: {
+  "buttons": [
+    {
+      "title": "Yes",
+      "payload": "/ask_reset"
+    },
+    {
+      "title": "No",
+      "payload": "/out_of_scope"
+    }
+  ]
+})'
+Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_ask_reset': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_reset': 1.0, 'prev_action_default_ask_affirmation': 1.0}]
+There is no memorised next action
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'ecard' with intent '{'name': 'e_card', 'confidence': 0.38251838053692866}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'intent_ask_reset': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_reset': 1.0, 'prev_action_default_ask_affirmation': 1.0}, {'intent_e_card': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+User 'user' affirmed intent 'e_card'
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_revert_fallback_events' with prob 1.00.
+Action 'action_revert_fallback_events' ended with events '['UserUtteranceReverted()', 'UserUtteranceReverted()', 'ActionExecuted(action: action_listen, policy: None, confidence: None)', "UserUttered(text: ecard, intent: {'name': 'e_card', 'confidence': 1.2}, entities: [])"]'
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_e_card': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Your E-card can be accesed from the link. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_e_card': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_e_card': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, GET, OPTIONS, POST       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'prev_action_listen': 1.0}]
+There is no memorised next action
+User 'default' has to affirm intent 'None'.
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_default_ask_affirmation' with prob 1.00.
+Action 'action_default_ask_affirmation' ended with events '[]'
+Bot utterance 'BotUttered(text: Did you mean 'None'?, data: {
+  "buttons": [
+    {
+      "title": "Yes",
+      "payload": "/None"
+    },
+    {
+      "title": "No",
+      "payload": "/out_of_scope"
+    }
+  ]
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0}, {'prev_action_default_ask_affirmation': 1.0}]
+There is no memorised next action
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9282776469044032}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'appointment booking' with intent '{'name': 'ask_appoint', 'confidence': 0.5223437342141302}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_ask_appoint': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Book appointment helps you get a confirmed appointment booking with a Doctor or Hospital listed on Vidal Health app.Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_ask_appoint': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_appoint': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'doctor search' with intent '{'name': 'search_speciality', 'confidence': 0.37958528329822094}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'intent_ask_appoint': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_appoint': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_appoint': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'gynac' with intent '{'name': 'search_speciality', 'confidence': 0.30979667077275846}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'physiscian' with intent '{'name': 'search_speciality', 'confidence': 0.277307232484228}' and entities '[]'
+Logged UserUtterance - tracker now has 18 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'dental' with intent '{'name': 'goodbye', 'confidence': 0.2715178530699448}' and entities '[]'
+Logged UserUtterance - tracker now has 22 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'intent_goodbye': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_goodbye' with prob 1.00.
+Action 'utter_goodbye' ended with events '[]'
+Bot utterance 'BotUttered(text: Talk to you later!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'intent_goodbye': 1.0, 'prev_action_listen': 1.0}, {'intent_goodbye': 1.0, 'prev_utter_goodbye': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.50.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.8317564790420341}' and entities '[]'
+Logged UserUtterance - tracker now has 26 events
+Current slot values: 
+
+Current tracker state [{'intent_goodbye': 1.0, 'prev_action_listen': 1.0}, {'intent_goodbye': 1.0, 'prev_utter_goodbye': 1.0}, {'intent_goodbye': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_restart' with prob 0.35.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, GET, POST, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9282776469044032}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'otp' with intent '{'name': 'ask_otp', 'confidence': 0.5811928448226626}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Failed to run custom action 'action_faqs'. Couldn't connect to the server at 'http://10.1.4.205:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='10.1.4.205', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029CB7FE7668>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+Encountered an exception while running action 'action_faqs'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000029CB7FE7668>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.1.4.205', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029CB7FE7668>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\actions\action.py", line 331, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\utils.py", line 672, in request
+    **kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.1.4.205', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029CB7FE7668>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\processor.py", line 347, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\actions\action.py", line 352, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_faqs' ended with events '[]'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.8317564790420341}' and entities '[]'
+Logged UserUtterance - tracker now has 9 events
+Current slot values: 
+
+Current tracker state [{'intent_ask_otp': 1.0, 'prev_action_listen': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_goodbye' with prob 1.00.
+Action 'utter_goodbye' ended with events '[]'
+Bot utterance 'BotUttered(text: Talk to you later!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_goodbye': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_goodbye': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.50.
+Action 'action_listen' ended with events '[]'
+Creating a new tracker for id 'default'.
+Received user message '/st/stop' with intent '{'name': 'st/stop', 'confidence': 1.0}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Feature 'intent_st/stop' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [None, {}, {'intent_st/stop': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.50.
+Calling action endpoint to run action 'action_faqs'.
+Failed to run custom action 'action_faqs'. Couldn't connect to the server at 'http://10.1.4.205:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='10.1.4.205', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029CBA0A2F28>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+Encountered an exception while running action 'action_faqs'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "c:\users\deepanshu.chhaparwal\appdata\local\programs\python\python36\Lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000029CBA0A2F28>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.1.4.205', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029CBA0A2F28>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\actions\action.py", line 331, in run
+    json=json, method="post", timeout=DEFAULT_REQUEST_TIMEOUT)
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\utils.py", line 672, in request
+    **kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\deepanshu.chhaparwal\bot2\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.1.4.205', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029CBA0A2F28>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\processor.py", line 347, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "c:\users\deepanshu.chhaparwal\rasa_core\rasa_core\actions\action.py", line 352, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Action 'action_faqs' ended with events '[]'
+Feature 'intent_st/stop' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'intent_st/stop' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{}, {'intent_st/stop': 1.0, 'prev_action_listen': 1.0}, {'prev_action_faqs': 1.0, 'intent_st/stop': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, OPTIONS, HEAD, GET       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, GET, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9282776469044032}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'otp' with intent '{'name': 'ask_otp', 'confidence': 0.5811928448226626}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_otp': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Non delivery/delayed delivery of  SMS is may happen due to registration of a number under NDNC/NDND, we would request you to kindly de-register yourself and try again, in case the issue persists contact us on customerservice@vidalhealth.com., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_otp': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'kya hal h' with intent '{'name': 'search_doc', 'confidence': 0.2017106752082494}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_otp': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_doc': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: DOCTOR SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_doc': 1.0, 'prev_action_listen': 1.0}, {'intent_search_doc': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'kaise ho si' with intent '{'name': 'ask_mobile_email', 'confidence': 0.20364804783827994}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+
+Current tracker state [{'intent_search_doc': 1.0, 'prev_action_listen': 1.0}, {'intent_search_doc': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_mobile_email': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Current tracker state [{'intent_search_doc': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_mobile_email': 1.0}, {'intent_ask_mobile_email': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'sir' with intent '{'name': 'search_speciality', 'confidence': 0.2668246288577642}' and entities '[]'
+Logged UserUtterance - tracker now has 17 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_mobile_email': 1.0}, {'intent_ask_mobile_email': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_mobile_email': 1.0, 'prev_action_faqs': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'otp' with intent '{'name': 'ask_otp', 'confidence': 0.5811928448226626}' and entities '[]'
+Logged UserUtterance - tracker now has 21 events
+Current slot values: 
+
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_listen': 1.0}, {'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_otp': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: Non delivery/delayed delivery of  SMS is may happen due to registration of a number under NDNC/NDND, we would request you to kindly de-register yourself and try again, in case the issue persists contact us on customerservice@vidalhealth.com., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_search_speciality': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_otp': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'login' with intent '{'name': 'ask_login', 'confidence': 0.6266649670303475}' and entities '[]'
+Logged UserUtterance - tracker now has 25 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_otp': 1.0}, {'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_login': 1.0}]
+There is a memorised next action '26'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_faqs' with prob 1.00.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: You can Sign in via Google/Facebook or use your phone number. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_ask_otp': 1.0, 'prev_action_faqs': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_login': 1.0}, {'intent_ask_login': 1.0, 'prev_action_faqs': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, GET, OPTIONS, POST       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'user'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9282776469044032}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '7'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_greet' with prob 1.00.
+Action 'utter_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hello :). How can I help you?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'cardiologist appointment' with intent '{'name': 'ask_appoint', 'confidence': 0.2986788769924541}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_appoint': 1.0}]
+There is a memorised next action '26'
+User 'user' has to affirm intent 'ask_appoint'.
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_default_ask_affirmation' with prob 1.00.
+Action 'action_default_ask_affirmation' ended with events '[]'
+Bot utterance 'BotUttered(text: Did you mean 'ask_appoint'?, data: {
+  "buttons": [
+    {
+      "title": "Yes",
+      "payload": "/ask_appoint"
+    },
+    {
+      "title": "No",
+      "payload": "/out_of_scope"
+    }
+  ]
+})'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_ask_appoint': 1.0}, {'prev_action_default_ask_affirmation': 1.0, 'intent_ask_appoint': 1.0}]
+There is no memorised next action
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'No' with intent '{'name': 'greet', 'confidence': 0.4572104633460663}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'prev_action_listen': 1.0, 'intent_ask_appoint': 1.0}, {'prev_action_default_ask_affirmation': 1.0, 'intent_ask_appoint': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is no memorised next action
+User 'user' affirmed intent 'greet'
+Predicted next action using policy_2_TwoStageFallbackPolicy
+Predicted next action 'action_revert_fallback_events' with prob 1.00.
+Action 'action_revert_fallback_events' ended with events '['UserUtteranceReverted()', 'UserUtteranceReverted()', 'ActionExecuted(action: action_listen, policy: None, confidence: None)', "UserUttered(text: No, intent: {'name': 'greet', 'confidence': 1.2}, entities: [])"]'
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.91.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_action_faqs': 1.0, 'intent_greet': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 0.99.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'cardiologist' with intent '{'name': 'search_speciality', 'confidence': 0.6347205262384576}' and entities '[{'start': 0, 'end': 12, 'value': 'cardiologist', 'entity': 'speciality', 'confidence': 0.8397630395229636, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 18 events
+Current slot values: 
+
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_action_faqs': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.98.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'user'
+Received user message 'surgeon' with intent '{'name': 'search_speciality', 'confidence': 0.602710145126043}' and entities '[]'
+Logged UserUtterance - tracker now has 22 events
+Current slot values: 
+
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_listen': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_faqs' with prob 0.99.
+Calling action endpoint to run action 'action_faqs'.
+Action 'action_faqs' ended with events '[]'
+Bot utterance 'BotUttered(text: SPECIALITY SEARCH. Click the link to be redirected, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_speciality' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0, 'entity_speciality': 1.0}, {'prev_action_listen': 1.0, 'intent_search_speciality': 1.0}, {'prev_action_faqs': 1.0, 'intent_search_speciality': 1.0}]
+There is no memorised next action
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'

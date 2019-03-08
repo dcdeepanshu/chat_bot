@@ -1,0 +1,26 @@
+1.) Train RASA_NLU model ------>
+
+python -m rasa_nlu.train -c config_spacy.json --fixed_model_name current --data data/nlu/ -o models --project nlu --verbose
+
+2.) Train RASA_CORE model ------>
+
+python -m rasa_core.train -d domain.yml -s data/core -c policy.yml -o models/dialogue/
+
+
+2.1) Interactive RASA_CORE training -------->
+
+python -m rasa_core_sdk.endpoint --actions actions  (at one terminal)
+
+python -m rasa_core.train interactive -o models/dialogue  -d domain.yml -s data/core/stories.md  --nlu models/nlu/current --endpoints endpoints.yml
+
+
+3.) Connecting and running local api ------->
+
+python -m rasa_core_sdk.endpoint --actions actions  (at one terminal)
+
+python -m rasa_core.run --enable_api -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml --cors "*"
+
+
+4.) To visualize the stories as a graph ----->
+
+python -m rasa_core.visualize -d domain.yml -s data/core/stories.md -o graph.png
